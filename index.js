@@ -3,6 +3,7 @@ const Trends=require('./script/trends');
 const Issues=require('./script/issues');
 const Comments=require('./script/comments');
 const config=require('./config/config');
+const {log} =require('./utils/logger');
 
 const retryOptions = {
     retries: 2,
