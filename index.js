@@ -16,9 +16,9 @@ const run= async () => {
         const trendingUrl = "https://github.com/trending/"+attention+"?since=weekly";
         const repos = await new Trends(trendingUrl, retryOptions).getAll();
         const news=repos.map((repo,i)=>{
-            return `${i+1}.**[${repo.name}](${repo.url})**
-            ${repo.description}
-            +${repo.starsAdded}stars this week<br>`;
+                   const decription=repo.description.trim()===''?'':repo.description.trim+'\n';
+                return `${i+1}.**[${repo.name}](${repo.url})**+decription
+                +${repo.starsAdded}stars this week<br>`;
         }).join('');
         const issues = await new Issues(config.cycle).getAll();// 找到这些issues
         const filter_issues=issues.filter(issue => {
