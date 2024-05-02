@@ -9,7 +9,7 @@ config.dryRun=!process.env.TRENDING_NOT_DRY_RUN;
 config.githubToken = process.env.GITHUB_TOKEN_VITALETS;
 // : process.env.GITHUB_TOKEN_BOT;
 // config.githubToken = process.env.privateKey  ? process.env.privateKey  : secrets.privateKey;
-config.apiUrl = 'https://api.github.com/repos/foxcpu/github-trending-repos';
+config.apiUrl = 'https://api.github.com/repos/foxcpu/Programming-Language-Trends';
 config.trendingRetryOptions = {
     retries: 5,
     minTimeout: 5000,
