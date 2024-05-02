@@ -1,0 +1,46 @@
+{
+    "name": "languagenews",
+    "version": "1.0.0",
+    "description": "Language News Daily/Weekly headlines",
+    "main": "index.js",
+    "scripts": {
+ 
+        "test-all":"mocha index.js -r test/setup.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/foxcpu/Programming-Language-Trends.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "Apache-2.0",
+    "bugs": {
+      "url": "https://github.com/foxcpu/Programming-Language-Trends/issues"
+    },
+    "homepage": "https://github.com/foxcpu/Programming-Language-Trends#readme",
+    "dependencies": {
+        "@vitalets/google-translate-api": "^9.0.0-1",
+        "await-timeout": "^1.1.1",
+        "axios": "^0.20.0",
+        "axios-retry": "^3.1.8",
+        "cheerio": "^1.0.0-rc.2",
+        "emoji-regex": "^9.0.0",
+        "fs-extra": "^9.0.1",
+        "ip": "^1.1.5",
+        "ms": "^2.1.2",
+        "parse-link-header": "^1.0.1",
+        "promise-retry": "^2.0.1",
+        "ramda": "^0.27.1",
+        "throw-utils": "^2.0.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "dotenv": "^8.2.0",
+        "eslint": "^7.8.1",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.3.0",
+        "markdown-magic": "^2.6.1",
+        "mocha": "^8.1.3",
+        "sinon": "^14.0.1"
+    }
+  }
