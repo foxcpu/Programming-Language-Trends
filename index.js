@@ -16,7 +16,7 @@ const run= async () => {
         const trendingUrl = "https://github.com/trending/"+attention+"?since=weekly";
         const repos = await new Trends(trendingUrl, retryOptions).getAll();
         const news=repos.map((repo,i)=>{
-                const decription=repo.description.trim()===''?'':repo.description.trim+'\n';
+                const decription=repo.description.trim()===''?'':repo.description.trim()+'\n';
                 return `${i+1}.**[${repo.name}](${repo.url})**+${decription}
                 +${repo.starsAdded}stars this week<br>`;
         }).join('');
