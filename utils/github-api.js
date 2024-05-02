@@ -5,7 +5,7 @@ const parseLinkHeader=require('parse-link-header');
 const config=require('../config/config');
 const {log}=require('../utils/logger');
 
-// assert(config.githubToken,'Empty Github token. Check env variables.')
+assert(config.githubToken,'Empty Github token. Check env variables.')
 
 const request=axios.create({
     baseURL:config.apiUrl,
