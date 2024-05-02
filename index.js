@@ -22,12 +22,10 @@ const run= async () => {
         }).join('');
         const issues = await new Issues(config.cycle).getAll();// 找到这些issues
         const filter_issues=issues.filter(issue => {
-            if(issue.title.indexOf(attention)>=0){
                 const str_label=issue.labels.some(label=>label.name===attention);
                 if(str_label){
                     return true;
                 }
-            }
         });
         filter_issues.forEach(async (issue)=>{
             const comments = new Comments(issue);
