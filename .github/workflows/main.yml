@@ -22,6 +22,6 @@ jobs:
       working-directory: .
       # for github app auth
       env:
-        clientSecret: ${{ secrets.clientSecret }}
+        GITHUB_TOKEN_VITALETS: ${{ secrets.GITHUB_TOKEN_VITALETS }}
         privateKey: ${{ secrets.privateKey }}
         
