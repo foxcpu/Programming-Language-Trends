@@ -23,6 +23,7 @@
         "await-timeout": "^1.1.1",
         "axios": "^0.20.0",
         "axios-retry": "^3.1.8",
+        "dotenv": "^8.2.0",
         "cheerio": "^1.0.0-rc.2",
         "emoji-regex": "^9.0.0",
         "fs-extra": "^9.0.1",
