@@ -17,7 +17,7 @@ config.trendingRetryOptions = {
   config.artifactsPath = path.join('.artifacts', config.issuesLabel || '');
   config.isDaily = config.issuesLabel && config.issuesLabel.indexOf('daily') >= 0;
   config.noUpdatePeriodMs = config.isDaily ? ms('22h') : ms('6d');
-  config.attentions=['javascript','java'];
+  config.attentions=['javascript','java','CSS'];
   config.cycle='trending-weekly';//trending-daily
   module.exports = config;
 
