@@ -27,10 +27,20 @@ const run= async () => {
                     return true;
                 }
         });
-        filter_issues.forEach(async (issue)=>{
+      filter_issues.forEach(async (issue)=>{
             const comments = new Comments(issue);
+            const comment_array=comments.getAll();
+            const add_comment=true;
+            if(comment_array.length>0){
+                const last_comment=comment_array.pop();
+                if(last_comment.body===news){
+                    add_comment=false;
+                }
+            }
+            if(add_comment){
             const newComment = await comments.addComment(news);
             log(newComment);
+            }
         });
     });
 }    
