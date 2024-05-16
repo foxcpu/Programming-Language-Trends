@@ -3,7 +3,7 @@ name: hackernews-daily-top
 on:
   workflow_dispatch:
   schedule:
-  - cron: "0 1 * * *"
+  - cron: "1 0 * * 1"
 
 jobs:
   fetch-top-posts:
