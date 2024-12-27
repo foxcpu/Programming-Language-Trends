@@ -39,4 +39,17 @@ module.exports= class Issues{
         }
     }
 
+    async addIssues(attention,body){
+        const url=`issue/new`;
+        const now = new Date();
+        const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        };
+        const formatter = new Intl.DateTimeFormat('zh-CN', options);
+        const formattedDate = formatter.format(now);
+        return(await githubApi.fetchJson(`post`,_url,{"title":formattedDate+attention,"body":body})).result;
+    }
+
 };
