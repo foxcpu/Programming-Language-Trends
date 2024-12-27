@@ -20,28 +20,8 @@ const run= async () => {
                 return `${i+1}.**[${repo.name}](${repo.url})**+${decription}
                 +${repo.starsAdded}stars this week<br>`;
         }).join('');
-        const issues = await new Issues(config.cycle).getAll();// 找到这些issues
-        const filter_issues=issues.filter(issue => {
-                const str_label=issue.labels.some(label=>label.name===attention);
-                if(str_label){
-                    return true;
-                }
-        });
-      filter_issues.forEach(async (issue)=>{
-            const comments = new Comments(issue);
-            const comment_array=comments.getAll();
-            const add_comment=true;
-            if(comment_array.length>0){
-                const last_comment=comment_array.pop();
-                if(last_comment.body===news){
-                    add_comment=false;
-                }
-            }
-            if(add_comment){
-            const newComment = await comments.addComment(news);
-            log(newComment);
-            }
-        });
+        const issues = await new Issues(config.cycle);// 构造问题列表
+        issues.addIssues(attention,news);
     });
 }    
 
