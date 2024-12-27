@@ -20,7 +20,7 @@ const run= async () => {
                 return `${i+1}.**[${repo.name}](${repo.url})**+${decription}
                 +${repo.starsAdded}stars this week<br>`;
         }).join('');
-        const issues = await new Issues(config.cycle);// 构造问题列表
+        const issues = await new Issues(config.cycle);
         issues.addIssues(attention,news);
     });
 }    
