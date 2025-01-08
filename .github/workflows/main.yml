@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: 18.x
     - name: npm install
-      run: npm install --only=prod
+      run: npm install 
       working-directory: .
     - name: fetch
       run: node index.js
