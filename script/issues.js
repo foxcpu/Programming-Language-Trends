@@ -49,6 +49,7 @@ module.exports= class Issues{
         };
         const formatter = new Intl.DateTimeFormat('zh-CN', options);
         const formattedDate = formatter.format(now);
+        log(`${formattedDate+attention}`);
         return(await githubApi.fetchJson(`post`,url,{"title":formattedDate+attention,"body":body})).result;
     }
 
