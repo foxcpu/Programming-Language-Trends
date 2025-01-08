@@ -23,7 +23,7 @@
         "await-timeout": "^1.1.1",
         "axios": "^0.21.0",
         "axios-retry": "^3.1.8",
-        "dotenv": "^16.0.3",
+        "dotenv": "^9.0.0",
         "cheerio": "^1.0.0-rc.12",
         "emoji-regex": "^9.0.0",
         "fs-extra": "^9.0.1",
@@ -36,7 +36,7 @@
     },
     "devDependencies": {
         "chai": "^4.2.0",
-        "dotenv": "^16.0.3",
+        "dotenv": "^9.0.0",
         "eslint": "^7.8.1",
         "husky": "^4.2.5",
         "lint-staged": "^10.3.0",
