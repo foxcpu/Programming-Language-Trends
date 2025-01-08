@@ -14,6 +14,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 18.x
+    - name:delete node_module
+      run: rm -rf node_modules
     - name: npm install
       run: npm install --only=prod
       working-directory: .
