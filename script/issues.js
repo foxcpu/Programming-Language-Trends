@@ -40,7 +40,7 @@ module.exports= class Issues{
     }
 
     async addIssues(attention,body){
-        const url=`issue/new`;
+        const url=`issues`;
         const now = new Date();
         const options = {
             year: 'numeric',
